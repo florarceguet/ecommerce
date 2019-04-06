@@ -1,0 +1,13 @@
+            @import './../../variables.scss';
+            .search-input {
+                background-color: $yellow;
+                padding: 5px 0;
+            }
+            
+             ::ng-deep .search-input>input.form-control {
+                font-size: map-get($fontSizes, 18) !important;
+            }
+            
+            #icon-search {
+                cursor: pointer;
+            }
