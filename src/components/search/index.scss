@@ -4,10 +4,20 @@
                 padding: 5px 0;
             }
             
-             ::ng-deep .search-input>input.form-control {
+            .form-control {
                 font-size: map-get($fontSizes, 18) !important;
             }
             
             #icon-search {
                 cursor: pointer;
+            }
+            
+            .logo-content {
+                vertical-align: middle;
+                text-align: right;
+            }
+            
+            .input-group {
+                padding-left: 0;
+                width: 100% !important;
             }
