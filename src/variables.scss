@@ -4,4 +4,9 @@ $black: #333333;
 $grey: #999999;
 $lightGrey: #EEEEEE;
 //font sizes
-$fontSizes:(18: 18px);
+$fontSizes:( 12: 12px, 14:14px, 18: 18px, 24:24px);
+//margins and paddings
+$spaces:(16:16px, 32:32px);
+//imageSizes
+$imageSize: 180px;
+$detailImage: 680px;

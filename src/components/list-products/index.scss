@@ -1,0 +1,40 @@
+ @import './../../variables.scss';
+ .img-list {
+     height: $imageSize;
+     border-radius: 4px;
+     margin-right: map-get($spaces, 16);
+ }
+ 
+ .card-container {
+     padding-left: 0px !important;
+     padding-right: 0px !important;
+ }
+ 
+ .card-body {
+     padding: map-get($spaces, 16);
+ }
+ 
+ .price {
+     font-size: map-get($fontSizes, 24);
+ }
+ 
+ .description {
+     font-size: map-get($fontSizes, 18);
+ }
+ 
+ .location {
+     font-size: map-get($fontSizes, 12);
+     display: inline-flex;
+     text-align: right;
+     vertical-align: bottom;
+     margin-top: 15px;
+ }
+ 
+ .col-3,
+ .col-6 {
+     padding: 0;
+ }
+ 
+ .col-2 {
+     padding-right: 0;
+ }

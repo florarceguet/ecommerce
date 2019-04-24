@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import './index.scss';
 class Search extends Component {
+productRef = React.createRef();
 
     render() {
         const ic_search = require("../../assets/ic_Search.png");
@@ -13,7 +14,7 @@ class Search extends Component {
                 <div className="col-md-9 col-sm-9 col-xs-9">
                     <form className="form-inline ">
                         <div className="input-group">
-                            <input type="text" className="form-control" placeholder="Nunca dejes de buscar" aria-label="InputSearch" aria-describedby="icon-search" />
+                            <input type="text" ref="this.productRef" className="form-control" placeholder="Nunca dejes de buscar" aria-label="InputSearch" aria-describedby="icon-search" />
                             <div className="input-group-prepend">
                                 <span className="input-group-text" id="icon-search">
                                     <img src={ic_search} alt="search" />

@@ -1,13 +1,18 @@
 import React, { Component } from 'react';
-import Search from './components/search';
 import './App.scss';
-require('bootstrap');
+import Search from './components/search';
+import ListProducts from './components/list-products';
+// require('bootstrap');
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-<Search></Search>      </div>
+        <Search></Search>
+        <div className="jumbotron">  
+            <ListProducts></ListProducts>
+          </div>
+      </div>
     );
   }
 }
