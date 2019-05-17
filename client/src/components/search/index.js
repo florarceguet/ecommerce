@@ -1,8 +1,13 @@
 import React, { Component } from "react";
 import './index.scss';
 class Search extends Component {
-productRef = React.createRef();
-
+  
+    searchRef = React.createRef();
+setItem = (e) =>{
+    e.preventDefault();
+    this.props.setItem(this.searchRef.current.value);
+    
+}
     render() {
         const ic_search = require("../../assets/ic_Search.png");
         const logo = require("../../assets/Logo_ML.png");
@@ -12,10 +17,10 @@ productRef = React.createRef();
                     <img src={logo} alt="" />
                 </div>
                 <div className="col-md-9 col-sm-9 col-xs-9">
-                    <form className="form-inline ">
+                    <form className="form-inline" onSubmit={this.setItem}>
                         <div className="input-group">
-                            <input type="text" ref="this.productRef" className="form-control" placeholder="Nunca dejes de buscar" aria-label="InputSearch" aria-describedby="icon-search" />
-                            <div className="input-group-prepend">
+                            <input type="text" ref={this.searchRef} className="form-control" placeholder="Nunca dejes de buscar" aria-label="InputSearch" aria-describedby="icon-search"/>
+                            <div className="input-group-prepend" onClick={this.setItem}>
                                 <span className="input-group-text" id="icon-search">
                                     <img src={ic_search} alt="search" />
                                 </span>

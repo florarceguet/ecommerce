@@ -1,29 +1,22 @@
 {
-  "name": "ecommerce",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "bootstrap": "^4.3.1",
-    "jquery": "^3.3.1",
-    "node-sass": "^4.11.0",
-    "popper.js": "^1.15.0",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "react-scripts": "2.1.8"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not ie <= 11",
-    "not op_mini all"
-  ]
+    "name": "ecommerce",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "start": "concurrently \"node ./bin/www\" \"cd client && npm start\""
+    },
+    "devDependencies": {
+        "concurrently": "3.5.1",
+        "cookie-parser": "~1.4.4",
+        "debug": "~2.6.9",
+        "express": "~4.16.1",
+        "http-errors": "~1.6.3",
+        "nodemon": "^1.19.0"
+    },
+    "dependencies": {
+        "debug": "~2.6.9"
+    },
+    "keywords": [],
+    "author": "Florencia Arceguet",
+    "license": "ISC"
 }
