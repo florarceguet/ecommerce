@@ -1,13 +1,16 @@
 import React, { Component } from "react";
 import './index.scss';
+
 class Search extends Component {
-  
+
     searchRef = React.createRef();
-setItem = (e) =>{
-    e.preventDefault();
-    this.props.setItem(this.searchRef.current.value);
-    
-}
+    searchTerm = '';
+
+    setItem = (e) => {
+        e.preventDefault(); 
+        this.searchTerm = this.searchRef.current.value;
+        this.props.history.replace( `/items/?search=${this.searchTerm}`);
+    }
     render() {
         const ic_search = require("../../assets/ic_Search.png");
         const logo = require("../../assets/Logo_ML.png");
@@ -19,11 +22,11 @@ setItem = (e) =>{
                 <div className="col-md-9 col-sm-9 col-xs-9">
                     <form className="form-inline" onSubmit={this.setItem}>
                         <div className="input-group">
-                            <input type="text" ref={this.searchRef} className="form-control" placeholder="Nunca dejes de buscar" aria-label="InputSearch" aria-describedby="icon-search"/>
+                            <input type="text" ref={this.searchRef} className="form-control" placeholder="Nunca dejes de buscar" aria-label="InputSearch" aria-describedby="icon-search"  />
                             <div className="input-group-prepend" onClick={this.setItem}>
-                                <span className="input-group-text" id="icon-search">
-                                    <img src={ic_search} alt="search" />
-                                </span>
+                                    <span className="input-group-text" id="icon-search">
+                                        <img src={ic_search} alt="search" />
+                                    </span>
                             </div>
                         </div>
                     </form>

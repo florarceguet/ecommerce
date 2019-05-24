@@ -1,2 +1,0 @@
-
-insert into modulo (id, detalle, codigo) values (1, 'detalle ejemplo', 'codigo_ejemplo');

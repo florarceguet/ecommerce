@@ -1,22 +1,23 @@
-            @import './../../variables.scss';
-            .search-input {
-                background-color: $yellow;
-                padding: 5px 0;
-            }
-            
-            .form-control {
-                font-size: map-get($fontSizes, 18) !important;
-            }
-            
-            #icon-search {
-                cursor: pointer;
-            }
-            
-            .logo-content {
-                vertical-align: middle;
-            }
-            
-            .input-group {
-                padding-left: 0;
-                width: 100% !important;
-            }
+@import './../../variables.scss';
+
+    .search-input {
+        background-color: $yellow;
+        padding: 5px 0;
+    }
+
+    .form-control {
+        font-size: map-get($fontSizes, 18) !important;
+    }
+
+    #icon-search {
+        cursor: pointer;
+    }
+
+    .logo-content {
+        vertical-align: middle;
+    }
+
+    .input-group {
+        padding-left: 0;
+        width: 100% !important;
+    }
