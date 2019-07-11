@@ -3,13 +3,15 @@ import './index.scss';
 
 class Search extends Component {
 
-    searchRef = React.createRef();
-    searchTerm = '';
-
-    setItem = (e) => {
-        e.preventDefault(); 
+    constructor(props) {
+        super(props);
+        this.searchRef = React.createRef();
+        this.searchTerm = '';
+    }
+    setItem = () => {
+        debugger
         this.searchTerm = this.searchRef.current.value;
-        this.props.history.replace( `/items/?search=${this.searchTerm}`);
+        this.props.history.push(`/items?search=${this.searchTerm}`);
     }
     render() {
         const ic_search = require("../../assets/ic_Search.png");
@@ -20,13 +22,13 @@ class Search extends Component {
                     <img src={logo} alt="" />
                 </div>
                 <div className="col-md-9 col-sm-9 col-xs-9">
-                    <form className="form-inline" onSubmit={this.setItem}>
+                    <form className="form-inline">
                         <div className="input-group">
-                            <input type="text" ref={this.searchRef} className="form-control" placeholder="Nunca dejes de buscar" aria-label="InputSearch" aria-describedby="icon-search"  />
+                            <input autoFocus type="text" ref={this.searchRef} className="form-control" placeholder="Nunca dejes de buscar" aria-label="InputSearch" aria-describedby="icon-search" />
                             <div className="input-group-prepend" onClick={this.setItem}>
-                                    <span className="input-group-text" id="icon-search">
-                                        <img src={ic_search} alt="search" />
-                                    </span>
+                                <span className="input-group-text" id="icon-search">
+                                    <img src={ic_search} alt="search" />
+                                </span>
                             </div>
                         </div>
                     </form>
@@ -34,6 +36,5 @@ class Search extends Component {
             </nav>
         )
     }
-
 };
 export default Search;

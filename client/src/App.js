@@ -9,9 +9,9 @@ class App extends Component {
     return (
       <Router>
         <div className="App">
-          <Search></Search>
+          {/* <Search></Search> */}
           <div className="jumbotron">
-            <ListProducts></ListProducts>
+            {/* <ListProducts query="lala"></ListProducts> */}
           </div>
           <Route path="/" component={Search} />
           <Route path="/items/" component={ListProducts} />
